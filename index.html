@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Car, Ship, FileCheck, Gavel } from "lucide-react";
 
+<<<<<<< HEAD
 export default function JapanAutoImport() {
   return (
     <div className="min-h-screen bg-zinc-950 text-white">
@@ -22,9 +23,39 @@ export default function JapanAutoImport() {
         <div className="mt-8 flex gap-4">
           <a href="#services"><Button size="lg">Leistungen</Button></a>
           <a href="#cars"><Button variant="outline" size="lg">Fahrzeuge</Button></a>
+=======
+<header class="hero">
+  <div class="container hero-inner">
+    <div>
+      <span class="kicker">Auto & Tuning</span>
+      <h1>Performance in Perfektion.</h1>
+      <p>Flatworks ist deine Werkstatt für individuelle Umbauten, Leistungssteigerung und mehr – mit Liebe zum Detail und Fokus auf Boxermotoren.</p>
+      <div style="display:flex;gap:12px">
+        <a class="btn" href="termin.html">Termin anfragen</a>
+        <a class="btn secondary" href="projekte.html">Projekte ansehen</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <img src="assets/projects/projekt_1.svg" alt="Hero" />
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="section">
+    <h2>Unsere Leistungen</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="assets/projects/projekt_2.svg" alt="Innenausstattung">
+        <div class="body">
+          <div class="badge">tracktool / komfort </div>
+          <h3>Innenraum aufwertung</h3>
+          <p> Ambientebeleuchtung über sportsitze bis zu überollkäfigen .</p>
+>>>>>>> 3eed6f6cff404313c41e4c41d67969f6c49d36d2
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* SERVICES */}
       <section id="services" className="py-24 px-6 bg-zinc-900">
         <h2 className="text-4xl font-bold text-center mb-16">Unsere Leistungen</h2>
@@ -38,6 +69,31 @@ export default function JapanAutoImport() {
           <a href="#top"><Button variant="ghost">Zur&uuml;ck zur Startseite ?</Button></a>
         </div>
       </section>
+=======
+  <section class="section">
+    <h2>Warum Flatworks?</h2>
+    <div class="grid">
+      <div class="card"><div class="body"><strong>Erfahrung</strong><br>Viele realisierte Umbauten von Strecken- bis Straßenfahrzeugen.</div></div>
+      <div class="card"><div class="body"><strong>Qualität</strong><br>Auswahl an Teilen namhafter Hersteller und präzise Montage.</div></div>
+      <div class="card"><div class="body"><strong>Transparenz</strong><br>Klare Abläufe, feste Ansprechpartner und ehrliche Beratung.</div></div>
+    </div>
+  </section>
+</main>
+<div class="footer">
+  <div class="container">
+    <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between">
+      <div>© <span id="year"></span> Flatworks – Performance in Perfektion.</div>
+      <div>
+        <a href="mailto:info@flatworks.example">info@flatworks.de</a> ·
+        <a href="tel:+49-000-000000">+49 000 000000</a> ·
+        <a href="#">Impressum</a>
+      </div>
+    </div>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</div>
+<script src="script.js"></script>
+>>>>>>> 3eed6f6cff404313c41e4c41d67969f6c49d36d2
 
       {/* CARS */}
       <section id="cars" className="py-24 px-6">
