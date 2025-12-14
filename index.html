@@ -1,100 +1,87 @@
-<!doctype html>
-<html lang="de">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Flatworks – Auto- & Tuning-Werkstatt</title>
-  <meta name="description" content="Flatworks – maßgeschneiderte Umbauten, Leistungssteigerungen und feinste Tuning-Arbeit.">
-  <link rel="icon" href="assets/logo.svg">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html">
-      <img src="assets/logo.svg" alt="Flatworks Logo" />
-      <span class="title">Flatworks</span>
-    </a>
-    <button class="mobile-toggle">Menü</button>
-    <div class="menu">
-      <a href="index.html">Start</a>
-      <a href="projekte.html">Projekte</a>
-      <a href="termin.html" class="btn">Termin</a>
-    </div>
-  </div>
-</div>
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Car, Ship, FileCheck, Gavel } from "lucide-react";
 
-<header class="hero">
-  <div class="container hero-inner">
-    <div>
-      <span class="kicker">Auto & Tuning</span>
-      <h1>Performance in Perfektion.</h1>
-      <p>Flatworks ist deine Werkstatt für individuelle Umbauten, Leistungssteigerung und präzise Abstimmung – mit Liebe zum Detail und Fokus auf Boxer- und Performance-Motoren.</p>
-      <div style="display:flex;gap:12px">
-        <a class="btn" href="termin.html">Termin anfragen</a>
-        <a class="btn secondary" href="projekte.html">Projekte ansehen</a>
-      </div>
-    </div>
-    <div class="hero-card">
-      <img src="assets/projects/projekt_1.svg" alt="Hero" />
-    </div>
-  </div>
-</header>
-
-<main class="container">
-  <section class="section">
-    <h2>Unsere Leistungen</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="assets/projects/projekt_2.svg" alt="Leistungssteigerung">
-        <div class="body">
-          <div class="badge">ECU / Software</div>
-          <h3>Leistungssteigerung</h3>
-          <p>Stage 1–3, individuelle Kennfeldoptimierung, Prüfstand-Service und Straßentuning.</p>
+export default function JapanAutoImport() {
+  return (
+    <div className="min-h-screen bg-zinc-950 text-white">
+      {/* HERO */}
+      <section className="h-screen flex flex-col justify-center items-center text-center px-6">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-5xl md:text-6xl font-bold"
+        >
+          Japan Auto Import
+        </motion.h1>
+        <p className="mt-6 text-zinc-300 max-w-xl">
+          Dein Partner f&uuml;r exklusive Fahrzeuge aus Japan � von der Auktion bis zur Zulassung.
+        </p>
+        <div className="mt-8 flex gap-4">
+          <a href="#services"><Button size="lg">Leistungen</Button></a>
+          <a href="#cars"><Button variant="outline" size="lg">Fahrzeuge</Button></a>
         </div>
-      </div>
-      <div class="card">
-        <img src="assets/projects/projekt_3.svg" alt="Fahrwerk & Bremsen">
-        <div class="body">
-          <div class="badge">Handling</div>
-          <h3>Fahrwerk & Bremsen</h3>
-          <p>Gewindefahrwerke, Sportbremsen, Achsvermessung und Corner-Weight-Setup.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="assets/projects/projekt_4.svg" alt="Auspuff & Ansaugung">
-        <div class="body">
-          <div class="badge">Sound & Flow</div>
-          <h3>Auspuff & Ansaugung</h3>
-          <p>Hochwertige Abgasanlagen, Downpipes, Ladeluftkühlung und optimierte Ansaugsysteme.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <section class="section">
-    <h2>Warum Flatworks?</h2>
-    <div class="grid">
-      <div class="card"><div class="body"><strong>Erfahrung</strong><br>Viele realisierte Umbauten von Strecken- bis Straßenfahrzeugen.</div></div>
-      <div class="card"><div class="body"><strong>Qualität</strong><br>Auswahl an Teilen namhafter Hersteller und präzise Montage.</div></div>
-      <div class="card"><div class="body"><strong>Transparenz</strong><br>Klare Abläufe, feste Ansprechpartner und ehrliche Beratung.</div></div>
-    </div>
-  </section>
-</main>
-<div class="footer">
-  <div class="container">
-    <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between">
-      <div>© <span id="year"></span> Flatworks – Performance in Perfektion.</div>
-      <div>
-        <a href="mailto:info@flatworks.example">info@flatworks.example</a> ·
-        <a href="tel:+49-000-000000">+49 000 000000</a> ·
-        <a href="#">Impressum</a>
-      </div>
-    </div>
-  </div>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-</div>
-<script src="script.js"></script>
+      {/* SERVICES */}
+      <section id="services" className="py-24 px-6 bg-zinc-900">
+        <h2 className="text-4xl font-bold text-center mb-16">Unsere Leistungen</h2>
+        <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <Service icon={<Gavel />} title="Japan Auktionen" text="Direkter Zugang zu japanischen Autoauktionen mit Transparenz." />
+          <Service icon={<Ship />} title="Import & Logistik" text="Transport, Verzollung und Einfuhr aus einer Hand." />
+          <Service icon={<Car />} title="Verf&uuml;gbare Fahrzeuge" text="Bereits importierte Fahrzeuge sofort verf&uuml;gbar." />
+          <Service icon={<FileCheck />} title="T&Uuml;V & Gutachten" text="&sect;21 Abnahme, Eintragung und Vollgutachten." />
+        </div>
+        <div className="text-center mt-12">
+          <a href="#top"><Button variant="ghost">Zur&uuml;ck zur Startseite ?</Button></a>
+        </div>
+      </section>
 
-</body>
-</html>
+      {/* CARS */}
+      <section id="cars" className="py-24 px-6">
+        <h2 className="text-4xl font-bold text-center mb-16">Fahrzeuge</h2>
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <CarCard name="Nissan Skyline R34" />
+          <CarCard name="Toyota Supra MK4" />
+          <CarCard name="Suzuki Jimny" />
+        </div>
+        <div className="text-center mt-12">
+          <a href="#top"><Button variant="ghost">Zur&uuml;ck zur Startseite ?</Button></a>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="py-6 text-center text-zinc-400 bg-zinc-900">
+        &copy; 2025 Japan Auto Import
+      </footer>
+    </div>
+  );
+}
+
+function Service({ icon, title, text }) {
+  return (
+    <motion.div whileHover={{ scale: 1.05 }}>
+      <Card className="bg-zinc-800 border-none rounded-2xl">
+        <CardContent className="p-6 text-center">
+          <div className="flex justify-center mb-4 text-orange-500">{icon}</div>
+          <h3 className="text-xl font-semibold mb-2">{title}</h3>
+          <p className="text-zinc-300 text-sm">{text}</p>
+        </CardContent>
+      </Card>
+    </motion.div>
+  );
+}
+
+function CarCard({ name }) {
+  return (
+    <Card className="bg-zinc-800 border-none rounded-2xl">
+      <CardContent className="p-6">
+        <div className="h-40 bg-zinc-700 rounded-xl mb-4" />
+        <h3 className="text-lg font-semibold">{name}</h3>
+        <p className="text-zinc-400 text-sm">Preis auf Anfrage</p>
+      </CardContent>
+    </Card>
+  );
+}
