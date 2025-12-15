@@ -1,143 +1,53 @@
-import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Car, Ship, FileCheck, Gavel } from "lucide-react";
-
-<<<<<<< HEAD
-export default function JapanAutoImport() {
-  return (
-    <div className="min-h-screen bg-zinc-950 text-white">
-      {/* HERO */}
-      <section className="h-screen flex flex-col justify-center items-center text-center px-6">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-5xl md:text-6xl font-bold"
-        >
-          Japan Auto Import
-        </motion.h1>
-        <p className="mt-6 text-zinc-300 max-w-xl">
-          Dein Partner f&uuml;r exklusive Fahrzeuge aus Japan � von der Auktion bis zur Zulassung.
-        </p>
-        <div className="mt-8 flex gap-4">
-          <a href="#services"><Button size="lg">Leistungen</Button></a>
-          <a href="#cars"><Button variant="outline" size="lg">Fahrzeuge</Button></a>
-=======
-<header class="hero">
-  <div class="container hero-inner">
-    <div>
-      <span class="kicker">Auto & Tuning</span>
-      <h1>Performance in Perfektion.</h1>
-      <p>Flatworks ist deine Werkstatt für individuelle Umbauten, Leistungssteigerung und mehr – mit Liebe zum Detail und Fokus auf Boxermotoren.</p>
-      <div style="display:flex;gap:12px">
-        <a class="btn" href="termin.html">Termin anfragen</a>
-        <a class="btn secondary" href="projekte.html">Projekte ansehen</a>
-      </div>
-    </div>
-    <div class="hero-card">
-      <img src="assets/projects/projekt_1.svg" alt="Hero" />
-    </div>
-  </div>
-</header>
-
-<main class="container">
-  <section class="section">
-    <h2>Unsere Leistungen</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="assets/projects/projekt_2.svg" alt="Innenausstattung">
-        <div class="body">
-          <div class="badge">tracktool / komfort </div>
-          <h3>Innenraum aufwertung</h3>
-          <p> Ambientebeleuchtung über sportsitze bis zu überollkäfigen .</p>
->>>>>>> 3eed6f6cff404313c41e4c41d67969f6c49d36d2
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanische Autos Importeur</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Japanische Autos Import</h1>
         </div>
-      </section>
+        <nav>
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="verfuegbare-autos.html">Verfügbare Autos</a></li>
+                <li><a href="tuev-abnahmen.html">TÜV Abnahmen</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<<<<<<< HEAD
-      {/* SERVICES */}
-      <section id="services" className="py-24 px-6 bg-zinc-900">
-        <h2 className="text-4xl font-bold text-center mb-16">Unsere Leistungen</h2>
-        <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          <Service icon={<Gavel />} title="Japan Auktionen" text="Direkter Zugang zu japanischen Autoauktionen mit Transparenz." />
-          <Service icon={<Ship />} title="Import & Logistik" text="Transport, Verzollung und Einfuhr aus einer Hand." />
-          <Service icon={<Car />} title="Verf&uuml;gbare Fahrzeuge" text="Bereits importierte Fahrzeuge sofort verf&uuml;gbar." />
-          <Service icon={<FileCheck />} title="T&Uuml;V & Gutachten" text="&sect;21 Abnahme, Eintragung und Vollgutachten." />
-        </div>
-        <div className="text-center mt-12">
-          <a href="#top"><Button variant="ghost">Zur&uuml;ck zur Startseite ?</Button></a>
-        </div>
-      </section>
-=======
-  <section class="section">
-    <h2>Warum Flatworks?</h2>
-    <div class="grid">
-      <div class="card"><div class="body"><strong>Erfahrung</strong><br>Viele realisierte Umbauten von Strecken- bis Straßenfahrzeugen.</div></div>
-      <div class="card"><div class="body"><strong>Qualität</strong><br>Auswahl an Teilen namhafter Hersteller und präzise Montage.</div></div>
-      <div class="card"><div class="body"><strong>Transparenz</strong><br>Klare Abläufe, feste Ansprechpartner und ehrliche Beratung.</div></div>
-    </div>
-  </section>
-</main>
-<div class="footer">
-  <div class="container">
-    <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between">
-      <div>© <span id="year"></span> Flatworks – Performance in Perfektion.</div>
-      <div>
-        <a href="mailto:info@flatworks.example">info@flatworks.de</a> ·
-        <a href="tel:+49-000-000000">+49 000 000000</a> ·
-        <a href="#">Impressum</a>
-      </div>
-    </div>
-  </div>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-</div>
-<script src="script.js"></script>
->>>>>>> 3eed6f6cff404313c41e4c41d67969f6c49d36d2
+    <main>
+        <section class="welcome">
+            <h2>Willkommen bei Japanische Autos Import!</h2>
+            <p>Wir bieten Ihnen exklusiv japanische Fahrzeuge, frisch importiert und bereit für den Straßenverkehr. Schauen Sie sich unsere neuesten Fahrzeuge an!</p>
+        </section>
 
-      {/* CARS */}
-      <section id="cars" className="py-24 px-6">
-        <h2 className="text-4xl font-bold text-center mb-16">Fahrzeuge</h2>
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          <CarCard name="Nissan Skyline R34" />
-          <CarCard name="Toyota Supra MK4" />
-          <CarCard name="Suzuki Jimny" />
-        </div>
-        <div className="text-center mt-12">
-          <a href="#top"><Button variant="ghost">Zur&uuml;ck zur Startseite ?</Button></a>
-        </div>
-      </section>
+        <section class="fresh-cars">
+            <h3>Frisch eingetroffene Fahrzeuge</h3>
+            <div class="car-list">
+                <!-- Beispiel für ein Fahrzeug -->
+                <div class="car-item">
+                    <img src="car1.jpg" alt="Auto 1">
+                    <h4>Subaru WRX STI 2021</h4>
+                    <p>Frisch importiert aus Japan. Perfekter Zustand, geringe Laufleistung.</p>
+                    <a href="verfuegbare-autos.html">Mehr erfahren</a>
+                </div>
+                <!-- Weitere Fahrzeuge hier hinzufügen -->
+            </div>
+        </section>
 
-      {/* FOOTER */}
-      <footer className="py-6 text-center text-zinc-400 bg-zinc-900">
-        &copy; 2025 Japan Auto Import
-      </footer>
-    </div>
-  );
-}
+        <section class="cta">
+            <h3>Interessiert? Kontaktieren Sie uns für mehr Informationen!</h3>
+            <a href="contact.html" class="btn">Jetzt Anfragen</a>
+        </section>
+    </main>
 
-function Service({ icon, title, text }) {
-  return (
-    <motion.div whileHover={{ scale: 1.05 }}>
-      <Card className="bg-zinc-800 border-none rounded-2xl">
-        <CardContent className="p-6 text-center">
-          <div className="flex justify-center mb-4 text-orange-500">{icon}</div>
-          <h3 className="text-xl font-semibold mb-2">{title}</h3>
-          <p className="text-zinc-300 text-sm">{text}</p>
-        </CardContent>
-      </Card>
-    </motion.div>
-  );
-}
-
-function CarCard({ name }) {
-  return (
-    <Card className="bg-zinc-800 border-none rounded-2xl">
-      <CardContent className="p-6">
-        <div className="h-40 bg-zinc-700 rounded-xl mb-4" />
-        <h3 className="text-lg font-semibold">{name}</h3>
-        <p className="text-zinc-400 text-sm">Preis auf Anfrage</p>
-      </CardContent>
-    </Card>
-  );
-}
+    <footer>
+        <p>&copy; 2025 Japanische Autos Import. Alle Rechte vorbehalten.</p>
+    </footer>
+</body>
+</html>
